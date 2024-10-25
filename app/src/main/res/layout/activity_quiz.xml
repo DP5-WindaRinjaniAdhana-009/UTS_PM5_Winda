@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="#CBD3C1">
+
+    <TextView
+        android:id="@+id/kuis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kuis Sederhana"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/pilihan"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/pilihanA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan A"/>
+
+        <RadioButton
+            android:id="@+id/pilihanB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan B"/>
+
+        <RadioButton
+            android:id="@+id/pilihanC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan C"/>
+
+        <RadioButton
+            android:id="@+id/pilihanD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan D"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selanjutnya"
+        android:onClick="next"
+        android:backgroundTint="#78909C"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
