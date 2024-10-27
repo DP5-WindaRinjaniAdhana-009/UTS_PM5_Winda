@@ -1,58 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="10dp"
-    android:background="#CBD3C1">
+    android:padding="10dp"
+    android:background="#789DBC"
+    android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/kuis"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kuis Sederhana"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#E9EED9"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:id="@+id/pilihan"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/pilihanA"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pilihan A"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <RadioButton
-            android:id="@+id/pilihanB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan B"/>
+            <TextView
+                android:id="@+id/kuis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Pertanyaan"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:justificationMode="inter_word"
+                android:textAlignment="viewStart" />
 
-        <RadioButton
-            android:id="@+id/pilihanC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan C"/>
+            <RadioGroup
+                android:id="@+id/pilihan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/pilihanD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan D"/>
+                <RadioButton
+                    android:id="@+id/pilihanA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Pilihan A"
+                    android:textColor="#333333" />
 
-    </RadioGroup>
+                <RadioButton
+                    android:id="@+id/pilihanB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Pilihan B"
+                    android:textColor="#333333" />
+
+                <RadioButton
+                    android:id="@+id/pilihanC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Pilihan C"
+                    android:textColor="#333333" />
+
+                <RadioButton
+                    android:id="@+id/pilihanD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Pilihan D"
+                    android:textColor="#333333" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/explanationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pembahasan"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textAlignment="viewStart"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#789DBC"
+                android:onClick="next"
+                android:text="Selanjutnya"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/finishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Selanjutnya"
-        android:onClick="next"
-        android:backgroundTint="#78909C"
-        android:textColor="#FFFFFF"/>
-
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#E9EED9"
+        android:onClick="finishQuiz"
+        android:text="Sudahi"
+        android:textColor="#000000"
+        android:visibility="gone" />
 </LinearLayout>

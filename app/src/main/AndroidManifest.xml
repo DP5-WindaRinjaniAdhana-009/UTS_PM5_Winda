@@ -11,8 +11,6 @@
 
         <activity android:name=".HasilKuis" />
         <activity android:name=".QuizActivity" />
-
-        <!-- Tambahkan android:exported="true" pada MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,5 +21,4 @@
         </activity>
 
     </application>
-
 </manifest>

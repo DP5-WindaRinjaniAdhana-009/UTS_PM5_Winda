@@ -14,7 +14,7 @@
         android:layout_margin="20dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="5dp"
-        app:cardBackgroundColor="#CBD3C1">
+        app:cardBackgroundColor="#E9EED9">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="Seru Belajar, Cerdas Bersama!"
-                android:textColor="#666666"
+                android:textColor="#000000"
                 android:textSize="18sp" />
 
             <ImageView

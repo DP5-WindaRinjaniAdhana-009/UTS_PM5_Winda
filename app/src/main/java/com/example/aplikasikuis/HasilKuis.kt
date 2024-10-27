@@ -12,16 +12,15 @@ class HasilKuis : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hasil_kuis)
 
-        val benar = intent.getIntExtra("BENAR", 0)
-        val salah = intent.getIntExtra("SALAH", 0)
-        val hasil = intent.getIntExtra("HASIL", 0)
+        val correctAnswers = intent.getIntExtra("BENAR", 0)
+        val incorrectAnswers = intent.getIntExtra("SALAH", 0)
+        val score = intent.getIntExtra("HASIL", 0)
 
-        val hasilText: TextView = findViewById(R.id.hasilText)
-        hasilText.text = "Benar: $benar\nSalah: $salah\nSkor: $hasil%"
+        val resultText: TextView = findViewById(R.id.hasilText)
+        resultText.text = "Benar: $correctAnswers\nSalah: $incorrectAnswers\nSkor: $score%"
 
-        val tombolUlangi: Button = findViewById(R.id.buttonUlangi)
-        tombolUlangi.setOnClickListener {
-
+        val retryButton: Button = findViewById(R.id.buttonUlangi)
+        retryButton.setOnClickListener {
             val intent = Intent(this@HasilKuis, MainActivity::class.java)
             startActivity(intent)
             finish()
